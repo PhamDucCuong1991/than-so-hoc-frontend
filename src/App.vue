@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <video autoplay muted loop id="video-background">
+      <source src="assets/video" type="video/mp4">
+    </video>
+    <HelloWorld/>
   </div>
 </template>
 
@@ -23,6 +25,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo video hiển thị đầy đủ kích thước và không bị cắt */
+  z-index: -1; /* Đặt vị trí z-index thấp hơn để video làm nền */
 }
 </style>
