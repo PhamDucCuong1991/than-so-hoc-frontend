@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <video autoplay muted loop id="video-background">
-      <source src="assets/video" type="video/mp4">
+      <source src="assets/video/gfp-astro-timelapse.mp4" type="video/mp4">
     </video>
     <HelloWorld/>
   </div>

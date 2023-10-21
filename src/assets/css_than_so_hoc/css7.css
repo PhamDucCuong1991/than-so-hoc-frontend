@@ -52,15 +52,17 @@
 }
 
 .index-list-frame {
-    display: flex;
     flex-flow: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: space-between;
+    display: grid;
+    grid-gap: 7px; /* Khoảng cách giữa các phần tử */
+    grid-template-columns: 1fr 1fr;
 }
 
 .index-list {
-    width: 47.5%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding-right: 5px;
@@ -155,14 +157,6 @@
     font-family: "PoppinsVN-700.ttf" !important;
 }
 
-/*.report-report-index::before, .index-list .index-label::before {
-content: "Chỉ số ";
-}
-@media (max-width: 420px) {
-.index-list .index-label::before {
-content: "CS ";
-} */
-
 
 .report-report-value {
     float: right;
@@ -173,9 +167,9 @@ content: "CS ";
 }
 
 .index-label {
-    font-size: 15px;
-    font-weight: 400;
-    color: #555;
+    font-size: 17px;
+    font-weight: 550;
+    color: #be3455;
     line-height: 1.25em;
 }
 
