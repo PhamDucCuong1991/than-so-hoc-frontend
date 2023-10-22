@@ -304,7 +304,7 @@
 }
 
 .report-process-mid .index-value::after {
-    content: "\A TUỔI";
+
     font-size: 11px;
     text-transform: uppercase;
     display: inherit;
