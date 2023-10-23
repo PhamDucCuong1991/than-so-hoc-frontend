@@ -269,64 +269,6 @@
         </div>
       </div>
 
-      <div id="HTML_CODE1635" class='ladi-element'>
-        <div class='ladi-html-code'>
-          <div class="report-process">
-            <div class="report-process-range">
-              <div class="report-process-top">
-                <div id="s_sochang1_1" class="index-value"></div>
-              </div>
-              <div class="report-process-mid">
-                <div id="s_tuoichang1_1" class="index-value"></div>
-              </div>
-              <div class="report-process-bottom">
-                <div id="s_sothachthuc1_1" class="index-value"></div>
-              </div>
-            </div>
-
-            <div class="report-process-range">
-              <div class="report-process-top">
-                <div id="s_sochang2_1" class="index-value"></div>
-              </div>
-              <div class="report-process-mid">
-                <div id="s_tuoichang2_1" class="index-value"></div>
-              </div>
-              <div class="report-process-bottom">
-                <div id="s_sothachthuc2_1" class="index-value"></div>
-              </div>
-            </div>
-
-            <div class="report-process-range">
-              <div class="report-process-top">
-                <div id="s_sochang3_1" class="index-value"></div>
-              </div>
-              <div class="report-process-mid">
-                <div id="s_tuoichang3_1" class="index-value"></div>
-              </div>
-              <div class="report-process-bottom">
-                <div id="s_sothachthuc3_1" class="index-value"></div>
-              </div>
-            </div>
-
-            <div class="report-process-range">
-              <div class="report-process-top">
-                <div id="s_sochang4_1" class="index-value"></div>
-              </div>
-              <div class="report-process-mid">
-                <div id="s_tuoichang4_1" class="index-value"></div>
-              </div>
-              <div class="report-process-bottom">
-                <div id="s_sothachthuc4_1" class="index-value"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="HTML_CODE1636" class='ladi-element'>
-        <div class='ladi-html-code'>
-          <link rel="stylesheet" href="../CSS_ThanSo/css7.css" type="text/css">
-        </div>
-      </div>
       <div id="BOX1706" class='ladi-element formatbox'>
         <div class='ladi-box'></div>
       </div>

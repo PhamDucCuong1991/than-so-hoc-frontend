@@ -11,7 +11,7 @@
     "core-js": "^3.8.3",
     "moment": "^2.29.4",
     "vue": "^2.6.14",
-    "vue-router": "^4.2.5"
+    "vue-router": "^3.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -21,7 +21,8 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "html2pdf.js": "^0.10.1"
   },
   "eslintConfig": {
     "root": true,

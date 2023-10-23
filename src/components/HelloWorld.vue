@@ -1,11 +1,12 @@
 <template>
   <div>
     <div>
-      <div>
-        <router-link to="/">Home</router-link>
-        <router-link to="/pdf-preview">About</router-link>
-        <router-view></router-view>
-      </div>
+      <router-link to="/">Home</router-link>
+      <router-link to="/pdf-preview">About</router-link>
+
+    </div>
+    <div>
+
 
       <div class="container mt-5">
         <div class="align-content-lg-center">
@@ -246,11 +247,11 @@ export default {
       this.arrPhuAm = arrPa;
       this.arrNguyenAm = arrNa;
       this.duongDoi = getSum(arrNgaySinh);
-      this.suMenh = getSum(arr);
+      this.suMenh = getSum(arrPa);
       this.linhHon = getSum(arrNa);
-      this.nhanCach = getSum(arrPa);
+      this.nhanCach = getTongPhuAmTrongHoVaTenDem(tachTenChiLayHoVaTenDem(ten, getLastWordNumbers(ten, str)));
       this.canBang = getSum(convertNameToNumbers(getInitials(ten), str));
-      this.truongThanh = getSum(arrNgaySinh) + getSum(arr);
+      this.truongThanh = getSum(arrNgaySinh) + getSum(arrPa);
       this.ngaySinh = getBirthDayNumber(arrNgaySinh);
       this.thaiDo = getAttitudeNumber(arrNgaySinh);
       this.tuDuyLyTri = getBirthDayNumber(arrNgaySinh) + getDestinyNumber(getLastWordNumbers(ten, str));
@@ -272,7 +273,7 @@ export default {
       this.dinhCao.dinhCao4 = getSum(arrNgaySinh.slice(2, arrNgaySinh.length));
 
       this.thachThuc.thachThuc1 = (Math.abs(tachNgayThangNamTuChuoi(ngaySinh).ngay_sinh - tachNgayThangNamTuChuoi(ngaySinh).thang_sinh)) % 9 || 9;
-      this.thachThuc.thachThuc2 = Math.abs((tachNgayThangNamTuChuoi(ngaySinh).ngay_sinh - tachNgayThangNamTuChuoi(ngaySinh).nam_sinh)) % 9 || 9;
+      this.thachThuc.thachThuc2 = (Math.abs(tachNgayThangNamTuChuoi(ngaySinh).ngay_sinh - tachNgayThangNamTuChuoi(ngaySinh).nam_sinh)) % 9 || 9;
       this.thachThuc.thachThuc3 = (Math.abs(this.thachThuc.thachThuc1 - this.thachThuc.thachThuc2)) % 9 || 9;
       this.thachThuc.thachThuc4 = (Math.abs(tachNgayThangNamTuChuoi(ngaySinh).thang_sinh - tachNgayThangNamTuChuoi(ngaySinh).nam_sinh)) % 9 || 9;
 
@@ -454,6 +455,20 @@ export default {
         } else {
           return null;
         }
+      }
+
+      function tachTenChiLayHoVaTenDem(originalArray, paramArray) {
+        return originalArray.slice(0, originalArray.length - paramArray.length);
+      }
+
+      function getTongPhuAmTrongHoVaTenDem(paramArray) {
+        let result = [];
+        for (let i = 0; i < paramArray.length; i++) {
+          if (paramArray[i] === "A" || paramArray[i] === "E" || paramArray[i] === "I" || paramArray[i] === "O" || paramArray[i] === "U") {
+            result.push(str.indexOf(paramArray[i]) % 9 + 1)
+          }
+        }
+        return getSum(result)
       }
     },
 

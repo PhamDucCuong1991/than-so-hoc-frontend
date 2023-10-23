@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
+import router from "@/router";
 import './assets/css_than_so_hoc/css.css';
 import './assets/css_than_so_hoc/css1.css';
 import './assets/css_than_so_hoc/css2.css';
@@ -11,7 +12,12 @@ import './assets/css_than_so_hoc/css7.css';
 import './assets/css_than_so_hoc/css8.css';
 import './assets/css/bootstrap.min.css';
 
-new Vue({
+Vue.config.productionTip = false;
 
+new Vue({
   render: h => h(App),
+  router,
+  scrollBehavior() {
+    return {x: 0, y: 0}
+  }
 }).$mount('#app')
