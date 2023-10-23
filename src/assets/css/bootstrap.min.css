@@ -2038,6 +2038,13 @@ progress {
     margin-bottom: .5rem
 }
 
+.inline-label {
+    display: inline-block;
+    width: 150px; /* Điều chỉnh độ rộng tùy ý */
+    vertical-align: middle;
+    margin-right: 10px; /* Điều chỉnh khoảng cách giữa label và input */
+}
+
 .col-form-label {
     padding-top: calc(.375rem + 1px);
     padding-bottom: calc(.375rem + 1px);

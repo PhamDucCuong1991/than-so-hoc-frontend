@@ -826,7 +826,7 @@ body {
 
 #SECTION_POPUP .ladi-container > .ladi-element {
     z-index: 90000070;
-    position: fixed;
+    position: relative;
     display: none
 }
 
