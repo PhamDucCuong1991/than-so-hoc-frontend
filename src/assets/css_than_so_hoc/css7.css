@@ -180,15 +180,14 @@
     align-self: center;
 }
 
-@media (max-width: 420px) {
-    .index-value {
-        font-size: 16px;
-    }
-}
+/*@media (max-width: 420px) {*/
+/*    .index-value {*/
+/*        font-size: 16px;*/
+/*    }*/
+/*}*/
 
 
 .report-matrix-bg {
-    background: url(https://w.ladicdn.com/5ebf76b51e398e6f1670261b/maxtrix-bg-01-20221120123604-wrewg.png);
     background-size: 100% 100%;
     width: 100%;
     height: 100%;

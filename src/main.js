@@ -11,9 +11,6 @@ import './assets/css_than_so_hoc/css7.css';
 import './assets/css_than_so_hoc/css8.css';
 import './assets/css/bootstrap.min.css';
 
-
-Vue.config.productionTip = false
-
 new Vue({
 
   render: h => h(App),
