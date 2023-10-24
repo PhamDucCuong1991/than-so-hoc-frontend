@@ -1,24 +1,14 @@
 <template>
-  <div class="container mt-3">
-    <div class="ladi-container">
-      <div id="HEADLINE1624" class='ladi-element divider'><h3 class='ladi-headline'>BẢN ĐỒ CUỘC ĐỜI</h3></div>
-      <!--            <a href="boiTinhDuyen.html" style=" color: #be3455 ;font-size: x-large ">Xem tình duyên cặp đôi</a>-->
-
-      <div id="c_namedobr" class='ladi-element report-name'><h3 class='ladi-headline'>BẠN LÀ PHIÊN BẢN DUY
-        NHẤT</h3></div>
+  <div class="container">
       <div id="HTML_CODE1627" class='ladi-element'>
         <div class='ladi-html-code'>
-
-
-          <link rel="stylesheet" href="../assets/css_than_so_hoc/css8.css" type="text/css">
-
           <div class="report-details report-container">
             <div class="report-container report-container-vflex">
               <div class="report-details-instruction report-align-center">Nhấn nút play để nghe sách nói
               </div>
               <audio id="AUDIOPLAYER" controls="" autoplay="" width="" height=""
                      class="report-align-center">
-                <source id="AUDIOPLAYER-DUONGDOI" type="audio/mp3">
+                <source id="AUDIOPLAYER-DUONGDOI" type="audio/mp3" src="">
                 Your browser does not support the audio element.
               </audio>
               <div class="report-details-instruction report-align-center">Vuốt lên để xem báo cáo</div>
@@ -31,7 +21,7 @@
                     <div class="story"></div>
 
                     <div class="title" align="center">TUỆ TÂM <br>CHỮA LÀNH <small>&amp;</small>
-                      HẠNH&nbsp;PHÚC
+                      HẠNH PHÚC
                     </div>
                     <div class="spacer" align="center">dành riêng cho chính bạn</div>
                     <div class="author"><span id="c_name_1"></span><br><span class="author"
@@ -265,91 +255,10 @@
             </div>
           </div>
 
-
-        </div>
-      </div>
-
-      <div id="BOX1706" class='ladi-element formatbox'>
-        <div class='ladi-box'></div>
-      </div>
-      <div id="GROUP1629" class='ladi-element'>
-        <div class='ladi-group'>
-          <div id="HTML_CODE1630" class='ladi-element'>
-            <div class='ladi-html-code'>
-              <div class="report-matrix-bg">
-                <div class="report-matrix report-matrix-1">
-                  <div id="s_ht1" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-2">
-                  <div id="s_ht2" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-3">
-                  <div id="s_ht3" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-4">
-                  <div id="s_ht4" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-5">
-                  <div id="s_ht5" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-6">
-                  <div id="s_ht6" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-7">
-                  <div id="s_ht7" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-8">
-                  <div id="s_ht8" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-9">
-                  <div id="s_ht9" class="index-value"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="HEADLINE1631" class='ladi-element'><h3 class='ladi-headline'>BIỂU ĐỒ HỌ TÊN</h3></div>
-        </div>
-      </div>
-      <div id="GROUP1632" class='ladi-element'>
-        <div class='ladi-group'>
-          <div id="HTML_CODE1633" class='ladi-element'>
-            <div class='ladi-html-code'>
-              <div class="report-matrix-bg">
-                <div class="report-matrix report-matrix-1">
-                  <div id="s_ns1" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-2">
-                  <div id="s_ns2" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-3">
-                  <div id="s_ns3" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-4">
-                  <div id="s_ns4" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-5">
-                  <div id="s_ns5" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-6">
-                  <div id="s_ns6" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-7">
-                  <div id="s_ns7" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-8">
-                  <div id="s_ns8" class="index-value"></div>
-                </div>
-                <div class="report-matrix report-matrix-9">
-                  <div id="s_ns9" class="index-value"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="HEADLINE1634" class='ladi-element'><h3 class='ladi-headline'>BIỂU ĐỒ NGÀY SINH</h3></div>
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="" style="margin-top: 150px">
+  <div class="container">
     <div class='ladi-html-code'>
       <div class="report-process">
         <div class="report-process-range">

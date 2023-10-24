@@ -1,183 +1,161 @@
 <template>
   <div>
-    <div>
-      <router-link to="/">Home</router-link>
-      <router-link to="/pdf-preview">About</router-link>
 
-    </div>
-    <div>
+    <div class="container row" align="center">
+      <div class="col-lg-4">
+        <ExportPDFDialog/>
+      </div>
 
-
-      <div class="container mt-5">
-        <div class="align-content-lg-center">
-
-          <div class="container mt-5" align="center">
-            <form id="form" class="col-lg-3">
-              <div class="mb-3">
-                <label for="name" class="form-label inline-label">Họ Và Tên:</label>
-                <input type="text" class="form-control" id="name" placeholder="Nhập Họ và tên">
-              </div>
-
-              <div class="mb-3">
-                <label for="birthday" class="form-label inline-label">Ngày Sinh:</label>
-                <input type="text" class="form-control" id="birthday" placeholder="Ngày /tháng /năm sinh">
-              </div>
-              <div class="text-center">
-                <button type="button" class="btn btn-primary" v-on:click="handleClick">TÍNH TOÁN</button>
-                <button type="button" class="btn btn-danger" v-on:click="deleteNumber">XÓA</button>
-              </div>
-            </form>
-            <hr>
+      <div class="col-lg-4 align-content-lg-center">
+        <form id="form">
+          <div class="mb-3">
+            <input type="text" class="form-control1" id="name" placeholder="Nhập Họ và tên">
           </div>
-          <div class="HienThiThongSo" style="margin-left: 850px">
-            <div id="hienthiJs" align="left"></div>
-            <div>Các nguyên âm là: {{ arrNguyenAm.join(', ') }}</div>
-            <div>Các phụ âm là: {{ arrPhuAm.join(', ') }}</div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control1" id="birthday" placeholder="Ngày /tháng /năm sinh">
           </div>
-        </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary" v-on:click="handleClick">TÍNH TOÁN</button>
+            <button type="button" class="btn btn-danger" v-on:click="deleteNumber">XÓA</button>
+          </div>
+        </form>
+        <div class='ladi-html-code' id="HTML_CODE1628"><!-- 380 x 400 -->
+          <h3 align="center" style="color: #842029">Con số cuộc đời</h3>
+          <h3 align="center" style="color: #842029">{{ fullName }} {{ birthDay }}</h3>
+
+          <div class="report-container index-list-frame">
+
+            <div class="index-list" id="l-duongdoi">
+              <div class="index-label">Đường&nbsp;đời</div>
+              <div id="soDuongDoi" class="index-value">{{ duongDoi }}</div>
+            </div>
+
+            <div class="index-list" id="l-sumenh">
+              <div class="index-label">Sứ&nbsp;mệnh</div>
+              <div id="soSuMenh" class="index-value">{{ suMenh }}</div>
+            </div>
+
+            <div class="index-list" id="l-noitam">
+              <div class="index-label">Linh Hồn</div>
+              <div id="soLinhHon" class="index-value">{{ linhHon }}</div>
+            </div>
+
+            <div class="index-list" id="l-damMe">
+              <div class="index-label">Đam mê</div>
+              <div id="soDamMe" class="index-value">{{ soDamMe.join(', ') }}</div>
+            </div>
+
+            <div class="index-list" id="l-nhanCach">
+              <div class="index-label">Nhân cách</div>
+              <div id="soNhanCach" class="index-value">{{ nhanCach }}</div>
+            </div>
+
+            <div class="index-list" id="l-thaiDo">
+              <div class="index-label">Thái độ</div>
+              <div id="soThaiDo" class="index-value">{{ thaiDo }}</div>
+            </div>
+
+            <div class="index-list" id="l-ngaySinh">
+              <div class="index-label">Ngày sinh</div>
+              <div id="soNgaySinh" class="index-value">{{ ngaySinh }}</div>
+
+            </div>
+
+            <div class="index-list" id="l-tuDuyLyTri">
+              <div class="index-label">Tư duy lý trí</div>
+              <div id="soTuDuyLyTri" class="index-value">{{ tuDuyLyTri }}</div>
+            </div>
+
+            <div class="index-list" id="l-camXuc">
+              <div class="index-label">Cảm xúc</div>
+              <div id="soCamXuc" class="index-value">{{ soCamXuc }}</div>
+            </div>
+
+            <div class="index-list" id="l-trucgiac">
+              <div class="index-label">Tư duy Trực giác</div>
+              <div id="soTrucGiac" class="index-value">{{ soTrucGiac }}</div>
+            </div>
+
+            <div class="index-list" id="l-trainghiem">
+              <div class="index-label">Tư duy Trải nghiệm</div>
+              <div id="soTuDuyTraiNghiem" class="index-value">{{ soTuDuyTraiNghiem }}</div>
+            </div>
+
+            <div class="index-list" id="l-bosung">
+              <div class="index-label">Bổ sung</div>
+              <div id="soThieu" class="index-value">{{ soThieu.join(', ') }}</div>
+            </div>
+
+            <div class="index-list" id="l-nttt">
+              <div class="index-label">Kết nối Linh hồn</div>
+              <div id="soketNoiLH" class="index-value">{{ soKetNoiLinhHon }}</div>
+            </div>
+
+            <div class="index-list" id="l-ddsm">
+              <div class="index-label">Kết nối Vận mệnh</div>
+              <div id="soKetNoiVM" class="index-value">{{ ketNoiVanMenh }}</div>
+            </div>
+            <div class="index-list" id="l-canbang">
+              <div class="index-label">Cân bằng</div>
+              <div id="soCanBang" class="index-value">{{ canBang }}</div>
+            </div>
+
+            <div class="index-list" id="l-truongthanh">
+              <div class="index-label">Trưởng thành</div>
+              <div id="soTruongThanh" class="index-value">{{ truongThanh }}</div>
+            </div>
+
+            <div class="index-list" id="l-thangcanhan">
+              <div class="index-label">Tháng cá nhân</div>
+              <div id="soThangCaNhan" class="index-value">{{ thangCaNhan }}</div>
+            </div>
+
+            <div class="index-list" id="l-namcanhan">
+              <div class="index-label">Năm cá nhân</div>
+              <div id="soNamCaNhan" class="index-value">{{ namCaNhan }}</div>
+            </div>
 
 
-        <div id="HTML_CODE1628" class='ladi-element'>
-          <div class='ladi-html-code'><!-- 380 x 400 -->
-            <h3 align="center" style="color: #842029">Con số cuộc đời</h3>
-            <h3 align="center" style="color: #842029">{{ fullName }} {{ birthDay }}</h3>
+            <div class="index-list" id="l-soTuDuyLyTri">
+              <div class="index-label">Tư duy lý trí</div>
+              <div id="soTuDuyLyTri" class="index-value">{{ tuDuyLyTri }}</div>
+            </div>
 
-            <div class="report-container index-list-frame">
-
-              <div class="index-list" id="l-duongdoi">
-                <div class="index-label">Đường&nbsp;đời</div>
-                <div id="soDuongDoi" class="index-value">{{ duongDoi }}</div>
-              </div>
-
-              <div class="index-list" id="l-sumenh">
-                <div class="index-label">Sứ&nbsp;mệnh</div>
-                <div id="soSuMenh" class="index-value">{{ suMenh }}</div>
-              </div>
-
-              <div class="index-list" id="l-noitam">
-                <div class="index-label">Linh Hồn</div>
-                <div id="soLinhHon" class="index-value">{{ linhHon }}</div>
-              </div>
-
-              <div class="index-list" id="l-damMe">
-                <div class="index-label">Đam mê</div>
-                <div id="soDamMe" class="index-value">{{ soDamMe.join(', ') }}</div>
-              </div>
-
-              <div class="index-list" id="l-nhanCach">
-                <div class="index-label">Nhân cách</div>
-                <div id="soNhanCach" class="index-value">{{ nhanCach }}</div>
-              </div>
-
-              <div class="index-list" id="l-thaiDo">
-                <div class="index-label">Thái độ</div>
-                <div id="soThaiDo" class="index-value">{{ thaiDo }}</div>
-              </div>
-
-              <div class="index-list" id="l-ngaySinh">
-                <div class="index-label">Ngày sinh</div>
-                <div id="soNgaySinh" class="index-value">{{ ngaySinh }}</div>
-
-              </div>
-
-              <div class="index-list" id="l-tuDuyLyTri">
-                <div class="index-label">Tư duy lý trí</div>
-                <div id="soTuDuyLyTri" class="index-value">{{ tuDuyLyTri }}</div>
-              </div>
-
-              <div class="index-list" id="l-camXuc">
-                <div class="index-label">Cảm xúc</div>
-                <div id="soCamXuc" class="index-value">{{ soCamXuc }}</div>
-              </div>
-
-              <div class="index-list" id="l-trucgiac">
-                <div class="index-label">Tư&nbsp;duy Trực&nbsp;giác</div>
-                <div id="soTrucGiac" class="index-value">{{ soTrucGiac }}</div>
-              </div>
-
-              <div class="index-list" id="l-trainghiem">
-                <div class="index-label">Tư&nbsp;duy Trải&nbsp;nghiệm</div>
-                <div id="soTuDuyTraiNghiem" class="index-value">{{ soTuDuyTraiNghiem }}</div>
-              </div>
-
-              <div class="index-list" id="l-bosung">
-                <div class="index-label">Bổ&nbsp;sung</div>
-                <div id="soThieu" class="index-value">{{ soThieu.join(', ') }}</div>
-              </div>
-
-              <div class="index-list" id="l-nttt">
-                <div class="index-label">Kết nối Linh hồn</div>
-                <div id="soketNoiLH" class="index-value">{{ soKetNoiLinhHon }}</div>
-              </div>
-
-              <div class="index-list" id="l-ddsm">
-                <div class="index-label">Kết&nbsp;nối Vận&nbsp;mệnh</div>
-                <div id="soKetNoiVM" class="index-value">{{ ketNoiVanMenh }}</div>
-              </div>
-              <div class="index-list" id="l-canbang">
-                <div class="index-label">Cân&nbsp;bằng</div>
-                <div id="soCanBang" class="index-value">{{ canBang }}</div>
-              </div>
-
-              <div class="index-list" id="l-truongthanh">
-                <div class="index-label">Trưởng&nbsp;thành</div>
-                <div id="soTruongThanh" class="index-value">{{ truongThanh }}</div>
-              </div>
-
-              <div class="index-list" id="l-thangcanhan">
-                <div class="index-label">Tháng cá&nbsp;nhân</div>
-                <div id="soThangCaNhan" class="index-value">{{ thangCaNhan }}</div>
-              </div>
-
-              <div class="index-list" id="l-namcanhan">
-                <div class="index-label">Năm cá&nbsp;nhân</div>
-                <div id="soNamCaNhan" class="index-value">{{ namCaNhan }}</div>
-              </div>
-
-
-              <div class="index-list" id="l-soTuDuyLyTri">
-                <div class="index-label">Tư duy lý trí</div>
-                <div id="soTuDuyLyTri" class="index-value">{{ tuDuyLyTri }}</div>
-              </div>
-
-              <div class="index-list" id="l-sucManhTT">
-                <div class="index-label">Sức mạnh tiềm thức</div>
-                <div id="soSucManhTT" class="index-value">{{ sucManhTiemThuc }}</div>
-              </div>
-
+            <div class="index-list" id="l-sucManhTT">
+              <div class="index-label">Sức mạnh tiềm thức</div>
+              <div id="soSucManhTT" class="index-value">{{ sucManhTiemThuc }}</div>
             </div>
 
           </div>
 
         </div>
-        <div class="">
-          <DinhCaoVaThachThuc
-              :dinhCao="dinhCao"
-              :thachThuc="thachThuc"
-          />
+      </div>
+      <div class="col-lg-4">
+        <div class="container container-sm">
+          <div id="HTML_CODE1628" class='ladi-element'>
+            <DinhCaoVaThachThuc
+                :dinhCao="dinhCao"
+                :thachThuc="thachThuc"
+            />
+          </div>
         </div>
-      </div>
-
-      <div class="divCenter">
-
-      </div>
-
-      <div class="divRight">
-
       </div>
     </div>
 
-
   </div>
+
 </template>
 
 <script>
 import DinhCaoVaThachThuc from "@/components/DinhCaoVaThachThuc";
+import ExportPDFDialog from "@/components/ExportPDFDialog";
 
 export default {
   name: 'HelloWorld',
   components: {
     DinhCaoVaThachThuc,
+    ExportPDFDialog
   },
   props: {},
   data() {
@@ -236,10 +214,10 @@ export default {
       let daySoCamXuc = [];
       let daySoTrucGiac = [];
       const arrNgaySinh = extractNumbers(ngaySinh);
-      console.log('arrNgaySinh', arrNgaySinh)
       const arr = convertNameToNumbers(ten, str);
 
-      displayResults(ten, ngaySinh, arr);
+      // displayResults(ten, ngaySinh, arr);
+
       nguyenPhuAm(ten); // Lấy ra mảng nguyên âm và phụ âm
       getDaySoCamXuc(ten); //Lấy ra mảng chữ số cảm xúc trong tên
       getDaySoTrucGiac(ten);  // Lấy ra mảng chữ số trực giác trong tên
@@ -247,11 +225,11 @@ export default {
       this.arrPhuAm = arrPa;
       this.arrNguyenAm = arrNa;
       this.duongDoi = getSum(arrNgaySinh);
-      this.suMenh = getSum(arrPa);
+      this.suMenh = getSum(arr);
       this.linhHon = getSum(arrNa);
-      this.nhanCach = getTongPhuAmTrongHoVaTenDem(tachTenChiLayHoVaTenDem(ten, getLastWordNumbers(ten, str)));
+      this.nhanCach = getSum(arrPa);
       this.canBang = getSum(convertNameToNumbers(getInitials(ten), str));
-      this.truongThanh = getSum(arrNgaySinh) + getSum(arrPa);
+      this.truongThanh = getSum([this.duongDoi, this.suMenh]);
       this.ngaySinh = getBirthDayNumber(arrNgaySinh);
       this.thaiDo = getAttitudeNumber(arrNgaySinh);
       this.tuDuyLyTri = getBirthDayNumber(arrNgaySinh) + getDestinyNumber(getLastWordNumbers(ten, str));
@@ -277,15 +255,14 @@ export default {
       this.thachThuc.thachThuc3 = (Math.abs(this.thachThuc.thachThuc1 - this.thachThuc.thachThuc2)) % 9 || 9;
       this.thachThuc.thachThuc4 = (Math.abs(tachNgayThangNamTuChuoi(ngaySinh).thang_sinh - tachNgayThangNamTuChuoi(ngaySinh).nam_sinh)) % 9 || 9;
 
-
-      function displayResults(name, birthDay, nameNumbers) {
-        const el = document.getElementById("hienthiJs");
-        el.innerHTML = `
-              <div>Dãy số Họ và tên: ${nameNumbers}</div>
-              <div>Chữ cái đầu họ và tên: ${getInitials(name)} (${convertNameToNumbers(getInitials(name), str)})</div>
-              <div>Chữ số trong Tên là: ${getLastWordNumbers(name, str)}</div>
-            `;
-      }
+      // function displayResults(name, birthDay, nameNumbers) {
+      //   const el = document.getElementById("hienthiJs");
+      //   el.innerHTML = `
+      //         <div>Dãy số Họ và tên: ${nameNumbers}</div>
+      //         <div>Chữ cái đầu họ và tên: ${getInitials(name)} (${convertNameToNumbers(getInitials(name), str)})</div>
+      //         <div>Chữ số trong Tên là: ${getLastWordNumbers(name, str)}</div>
+      //       `;
+      // }
 
       function extractNumbers(value) {
         return (value.match(/[0-9]/g) || []).map(Number);
@@ -299,10 +276,12 @@ export default {
         return [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(n => !arr.includes(n));
       }
 
+      // Lay chữ cái đầu trong họ và tên
       function getInitials(name) {
         return name.split(' ').map(word => word[0]).join('');
       }
 
+      // Chữ số trong tên
       function getLastWordNumbers(name, str) {
         const lastWord = name.split(' ').pop();
         return convertNameToNumbers(lastWord, str).filter(n => n !== 0);
@@ -314,8 +293,9 @@ export default {
       }
 
       function getSum(arr) {
-        const sum = arr.reduce((acc, curr) => (acc + curr) % 9, 0);
-        return (sum === 11 || sum === 22 || sum === 33) ? sum : (sum || 9);
+        const sum = arr.reduce((acc, curr) => acc + curr, 0);
+        if (sum === 11 || sum === 22 || sum === 33) return sum;
+        return (sum % 9) || 9;
       }
 
       function getBirthDayNumber(arr) {
@@ -425,13 +405,11 @@ export default {
       }
 
       function tachNgayThangNamTuChuoi(ngaySinh) {
-        // Tạo một mảng các biểu thức chính quy cho các định dạng khác nhau
         const regexPatterns = [
           /\d{2}\/\d{2}\/\d{4}/, // DD/MM/YYYY
           /\d{2}-\d{2}-\d{4}/, // DD-MM-YYYY
           /\d{2}\*\d{2}\*\d{4}/ // DD*MM*YYYY (ví dụ)
         ];
-
         let ketQua = null;
         // Lặp qua từng biểu thức chính quy để kiểm tra định dạng
         for (const pattern of regexPatterns) {
@@ -444,7 +422,6 @@ export default {
         if (ketQua) {
           // Tách ngày, tháng và năm từ chuỗi kết quả
           const parts = ketQua.split(/\/|-|\*/); // Phân tách bằng /, - hoặc *
-
           if (parts.length === 3) {
             return {
               ngay_sinh: parseInt(parts[0]),
@@ -457,19 +434,19 @@ export default {
         }
       }
 
-      function tachTenChiLayHoVaTenDem(originalArray, paramArray) {
-        return originalArray.slice(0, originalArray.length - paramArray.length);
-      }
-
-      function getTongPhuAmTrongHoVaTenDem(paramArray) {
-        let result = [];
-        for (let i = 0; i < paramArray.length; i++) {
-          if (paramArray[i] === "A" || paramArray[i] === "E" || paramArray[i] === "I" || paramArray[i] === "O" || paramArray[i] === "U") {
-            result.push(str.indexOf(paramArray[i]) % 9 + 1)
-          }
-        }
-        return getSum(result)
-      }
+      // function tachTenChiLayHoVaTenDem(originalArray, paramArray) {
+      //   return originalArray.slice(0, originalArray.length - paramArray.length);
+      // }
+      //
+      // function getTongPhuAmTrongHoVaTenDem(paramArray) {
+      //   let result = [];
+      //   for (let i = 0; i < paramArray.length; i++) {
+      //     if (paramArray[i] === "A" || paramArray[i] === "E" || paramArray[i] === "I" || paramArray[i] === "O" || paramArray[i] === "U") {
+      //       result.push(str.indexOf(paramArray[i]) % 9 + 1)
+      //     }
+      //   }
+      //   return getSum(result)
+      // }
     },
 
 
@@ -478,10 +455,10 @@ export default {
       document.getElementById("birthday").value = "";
       document.getElementById("hienthiJs").value = "";
     },
-    removeAccent(str) {
-      str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      str = str.replace(/Đ/g, "D").replace(/đ/g, "d");
-      return str;
+    removeAccent(string) {
+      string = string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      string = string.replace(/Đ/g, "D").replace(/đ/g, "d");
+      return string;
     },
   }
 

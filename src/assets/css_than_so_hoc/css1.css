@@ -330,7 +330,7 @@ body {
 }
 
 .ladi-element {
-    position: absolute;
+    position: relative;
     margin-top: 30px;
 }
 
@@ -1712,10 +1712,9 @@ body {
 }
 
 .ladi-html-code {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
-    margin-top: 50px;
 }
 
 .ladi-image {
